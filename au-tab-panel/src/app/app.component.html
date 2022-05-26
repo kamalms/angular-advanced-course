@@ -4,8 +4,13 @@
 
 
 <div class="container">
-<tabs>
-   <tab>
+
+  <ng-template #newtabspanel>
+    <button (click) ="tabspanel.tabSelection(login)">Login</button>
+     <button (click) ="tabspanel.tabSelection(signup)">Sign up</button>
+  </ng-template>
+<tabs #tabspanel [tabstemplate]="newtabspanel">
+   <tab title="Login" #login>
       <form>
           <div class="form-field">
               <label>Email:</label><input>
@@ -16,7 +21,7 @@
       </form>
    </tab>
 
-   <tab>
+   <tab title="Sign Up" #signup>
       <form>
           <div class="form-field">
               <label>Email:</label><input>
@@ -31,7 +36,7 @@
 
   </tab>
 
-  <tab>
+  <tab title="Login">
       <form>
           <div class="form-field">
               <label>Email:</label><input>
