@@ -7,11 +7,12 @@ import {AuInputModule} from 'au-input';
 import {AuTabPanelModule} from "au-tab-panel";
 import {AuModalModule} from "./au-modal/au-modal.module";
 import {HttpClientModule} from "@angular/common/http";
-
+import { AuuModalComponent } from './auu-modal/auu-modal.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuuModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,8 +20,7 @@ import {HttpClientModule} from "@angular/common/http";
     HttpClientModule,
     AuInputModule,
     AuTabPanelModule,
-    AuModalModule
-
+    AuModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

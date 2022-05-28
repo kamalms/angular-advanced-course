@@ -1,0 +1,22 @@
+<div class="modal-overlay" (click)="outsideclickEvent()">
+
+  <div class="modal-body" (click)="dontcloseoninnerClick($event)">
+    <!-- <div (click)="detectOutsideClick()">
+      <button >Close</button>
+    </div> -->
+   <div class="close-icon">
+    <ng-content select = "i"></ng-content>
+   </div>
+    <ng-container *ngIf="body else projectContent">
+      <ng-container *ngTemplateOutlet="body; context: context">
+
+      </ng-container>
+    </ng-container>
+<ng-template #projectContent>
+  <ng-content>
+
+  </ng-content>
+</ng-template>
+
+  </div>
+  </div>
